@@ -1,20 +1,14 @@
-// frontend/app.js
-// Minimal chat client that POSTs to /api/chat on the same domain.
-// If you host frontend separately, set API_BASE accordingly.
-
-const API_BASE = "http://localhost:8787"; // leave empty for same origin, or set your worker URL
+const API_BASE = "http://localhost:8787";
 const chatEl = document.getElementById("chat");
 const form = document.getElementById("form");
 const input = document.getElementById("input");
 
-// sessionId persisted in localStorage
 let sessionId = localStorage.getItem("cf_ai_session");
 if (!sessionId) {
   sessionId = "sess_" + cryptoRandomId();
   localStorage.setItem("cf_ai_session", sessionId);
 }
 
-// show a message locally
 function showMessage(role, text) {
   const div = document.createElement("div");
   div.className = "message " + (role === "user" ? "user" : role === "assistant" ? "assistant" : "system");
@@ -50,7 +44,6 @@ form.addEventListener("submit", async (e) => {
   }
 });
 
-// small helpers
 function escapeHtml(s) {
   return s.replace(/[&<>"']/g, (m) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[m]);
 }
