@@ -6,8 +6,8 @@
   "type": "module",
   "main": "worker/index.js",
   "scripts": {
-    "start": "npx wrangler dev",
-    "deploy": "npx wrangler deploy"
+    "start": "npx wrangler dev --site .",
+    "deploy": "npx wrangler deploy --site ."
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20250725.0",

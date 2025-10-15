@@ -15,6 +15,7 @@ database_id = "6d0c2e4e-4aee-467e-938a-480463c59108"
 [[migrations]]
 tag = "v1"
 new_sqlite_classes = [ "SessionMemory" ]
+database = "durable_objects_db"
 
 [ai]
 binding = "AI"

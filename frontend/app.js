@@ -2,7 +2,7 @@
 // Minimal chat client that POSTs to /api/chat on the same domain.
 // If you host frontend separately, set API_BASE accordingly.
 
-const API_BASE = ""; // leave empty for same origin, or set your worker URL
+const API_BASE = "http://localhost:8787"; // leave empty for same origin, or set your worker URL
 const chatEl = document.getElementById("chat");
 const form = document.getElementById("form");
 const input = document.getElementById("input");
