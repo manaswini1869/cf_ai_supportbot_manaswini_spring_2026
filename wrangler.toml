@@ -1,0 +1,25 @@
+name = "cf_ai_supportbot"
+main = "worker/index.js"
+compatibility_date = "2025-01-01"
+
+[durable_objects]
+bindings = [
+  { name = "SESSION_DO", class_name = "SessionMemory" }
+]
+
+[[d1_databases]]
+binding = "durable_objects_db"
+database_name = "durable_objects_db"
+database_id = "6d0c2e4e-4aee-467e-938a-480463c59108"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = [ "SessionMemory" ]
+
+[ai]
+binding = "AI"
+# optionally set default model in env variables:
+[vars]
+AI_MODEL = "@cf/meta/llama-3-8b-instruct"
+# If you use AI Gateway, set gateway id:
+AI_GATEWAY = "" # set gateway id if needed
