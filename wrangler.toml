@@ -1,4 +1,4 @@
-name = "cf_ai_supportbot"
+name = "supportbot"
 main = "worker/index.js"
 compatibility_date = "2025-01-01"
 
