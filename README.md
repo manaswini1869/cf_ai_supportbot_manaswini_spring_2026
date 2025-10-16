@@ -74,12 +74,6 @@ The `--site .` flag ensures your **frontend assets** and **Worker API** are both
 
 ---
 
-### 4. CORS Configuration
-
-Your Worker (`worker/index.js`) includes proper handling for `OPTIONS` requests and **CORS headers**, enabling your browser frontend to interact with the Worker API seamlessly both locally and after deployment.
-
----
-
 ## Deployment to Cloudflare
 
 ### 1. Authenticate Wrangler
@@ -118,7 +112,7 @@ https://supportbot.<your-cloudflare-username>.workers.dev
 | `styles.css`        | Basic **CSS styling** for the chat UI                                      |
 | `wrangler.toml`     | **Cloudflare config** — Workers AI, Durable Object, and D1 bindings        |
 | `package.json`      | Node dependencies and build/deploy scripts                                 |
-| `package-lock.json` | Lock file for reproducible builds                                          |
+
 
 ---
 
@@ -148,16 +142,6 @@ The Support Bot runs entirely on Cloudflare:
 │  - Persists history   │
 └───────────────────────┘
 ```
-
----
-
-## Additional Notes
-
-* All AI prompts used during development should be listed in `PROMPTS.md`.
-* Ensure your repository name begins with **`cf_ai_`** to qualify for fast-track review.
-* Include a live demo link (Workers.dev URL) in your `README.md`.
-
----
 
 ## License
 
