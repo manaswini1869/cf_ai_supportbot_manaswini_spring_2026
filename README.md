@@ -107,9 +107,9 @@ https://supportbot.<your-cloudflare-username>.workers.dev
 | File/Folder         | Description                                                                |
 | :------------------ | :------------------------------------------------------------------------- |
 | `worker/index.js`   | Core **Worker** logic — AI chat handling + Durable Object state management |
-| `index.html`        | Main **HTML frontend** for the chat interface                              |
-| `app.js`            | **Frontend logic** for chat input and message rendering                    |
-| `styles.css`        | Basic **CSS styling** for the chat UI                                      |
+| `frontend/index.html`        | Main **HTML frontend** for the chat interface                              |
+| `frontend/app.js`            | **Frontend logic** for chat input and message rendering                    |
+| `frontend/styles.css`        | Basic **CSS styling** for the chat UI                                      |
 | `wrangler.toml`     | **Cloudflare config** — Workers AI, Durable Object, and D1 bindings        |
 | `package.json`      | Node dependencies and build/deploy scripts                                 |
 
